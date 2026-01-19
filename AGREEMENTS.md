@@ -1,4 +1,4 @@
-# Team Agreements - QA Doctorado 2026 Equipo X
+# Team Agreements - QA Doctorado 2026 Equipo 5
 
 ## 1. Objetivo del Documento
 

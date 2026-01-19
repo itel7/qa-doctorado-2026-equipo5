@@ -35,7 +35,7 @@ El SUT cumple completamente con los requisitos:
 - ✅ Logs estructurados con Loguru para auditoría
 
 ### 2.3 Permite Repetir Pruebas y Recolectar Evidencia
-- ✅ **90 tests automatizados** preexistentes
+- ✅ **N tests automatizados** preexistentes
 - ✅ Suite de pruebas reproducibles
 - ✅ Fixtures y data factories para resetear estado
 - ✅ Base de datos limpiable entre ejecuciones
@@ -203,7 +203,7 @@ El SUT será considerado operativo cuando:
 2. ✅ API responde en http://localhost:8000
 3. ✅ Swagger UI accesible en http://localhost:8000/docs
 4. ✅ BD PostgreSQL contiene todas las tablas
-5. ✅ Al menos 80 de 90 tests pasan
+5. ✅ Al menos N de M tests pasan
 6. ✅ Health check verifica todos los componentes
 7. ✅ Logs muestran ejecución correcta
 
@@ -234,4 +234,4 @@ Durante el doctorado mediremos:
 
 **Aprobado**: Enero 18, 2026  
 **Estado**: ✅ SELECCIONADO COMO SUT  
-**Equipo**: QA Doctorado 2026 - Equipo X
+**Equipo**: QA Doctorado 2026 - Equipo 5
