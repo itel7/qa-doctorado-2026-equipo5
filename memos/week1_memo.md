@@ -1,7 +1,7 @@
 # Memo de Progreso - Semana 1
 
 **Fecha**: 17/01/2026  \
-**Equipo**: Equipo X  \
+**Equipo**: Equipo 5  \
 **Semana**: 1 de 8
 
 ## Objetivos de la semana
@@ -42,5 +42,5 @@
 
 ---
 
-**Preparado por**: Equipo X  \
+**Preparado por**: Equipo 5  \
 **Próxima revisión**: Semana 2
