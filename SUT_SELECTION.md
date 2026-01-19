@@ -1,4 +1,4 @@
-# SUT Selection - QA Doctorado 2026 Equipo X
+# SUT Selection - QA Doctorado 2026 Equipo 5
 
 ## 1. Sistema Bajo Prueba (SUT) Elegido
 
