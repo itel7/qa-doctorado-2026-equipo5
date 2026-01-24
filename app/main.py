@@ -43,3 +43,13 @@ def get_application() -> FastAPI:
 
 
 app = get_application()
+
+@app.get("/ping")
+async def ping():
+    """
+    Ruta de prueba rápida para verificar que la app levanta.
+    """
+    return {"message": "¡La app funciona!"}
+
+
+
