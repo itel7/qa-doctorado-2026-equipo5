@@ -2,7 +2,7 @@
 
 **Fecha**: Enero 20, 2026  
 **Proyecto**: QA Doctorado 2026 - FastAPI RealWorld SUT  
-**Equipo**: [Nombres del equipo]  
+**Equipo**: Equipo 5  
 **Estado**: ✅ Completado
 
 ---
