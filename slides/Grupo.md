@@ -9,6 +9,20 @@
 **Pregunta 1:** ¿Qué tipo de evidencia de pruebas reduce incertidumbre sobre calidad sin confundir “testing” con “quality assurance”?
 
 **Respuesta 1:**
+Para disminuir la incertidumbre asociada a la calidad del producto, es necesario distinguir entre el "testing" como mecanismo de verificación del software y el "quality assurance" como disciplina orientada a la gestión y mejora de los procesos. En este contexto, la evidencia más relevante se obtiene a partir de métricas como la Eficacia de la Detección de Defectos (Defect Detection Effectiveness, DDE) y la Densidad de Defectos, las cuales permiten evaluar de manera objetiva el desempeño del proceso de calidad.
+
+Mientras que el testing aporta información sobre el cumplimiento funcional y la validación de los requisitos del sistema, estas métricas cuantitativas contribuyen a reducir la incertidumbre al reflejar la capacidad del proceso para identificar y eliminar defectos antes de que el producto sea liberado a producción. De este modo, se proporciona evidencia empírica sobre la solidez del sistema de gestión de la calidad.
+
+Asimismo, las mediciones enfocadas en la calidad del producto, como la densidad de defectos y la efectividad en la detección de fallos, constituyen un soporte objetivo para determinar la preparación del software para su liberación y para analizar la eficacia de las prácticas de aseguramiento de la calidad implementadas.
+
+International Software Testing Qualifications Board. (2023). Certified Tester Foundation Level (CTFL) Syllabus Version 4.0. https://www.istqb.org/certifications/certified-tester-foundation-level
+
+---
+
+## Slide 2 — Semana 2 (Pregunta 2 + Respuesta 2)
+**Pregunta 2:** ¿Cómo convertir “calidad” en afirmaciones falsables y medibles?
+
+**Respuesta 2:**
 -Para convertir la "calidad" en afirmaciones falsables (es decir, que pueden ser puestas a prueba y desmentidas con evidencia) y medibles, es necesario aplicar el concepto de Factores y Métricas de Calidad mediante marcos de trabajo como el estándar ISO/IEC 25010 o el enfoque GQM (Goal-Question-Metric).
 
 1. El proceso de Operacionalización
@@ -51,13 +65,6 @@ Sommerville, I. (2016). Software Engineering (10ma ed.). Pearson.
 **Límite (1 línea):**  
 - ___ (qué NO demuestra esta evidencia) TBD
 
----
-
-## Slide 2 — Semana 2 (Pregunta 2 + Respuesta 2)
-**Pregunta 2:** ¿Cómo convertir “calidad” en afirmaciones falsables y medibles?
-
-**Respuesta 2:**
-- Agregar respuesta concreta del grupo. Ideal un solo párrafo.
 
 **Escenarios S2 (elige 2 “estrella”):**
 - Escenario A: E: ___ | Entorno: ___ | R: ___ | Medida: ___ | Evidencia: `evidence/week2/...` | Falsación: ___  
