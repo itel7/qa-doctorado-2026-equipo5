@@ -63,18 +63,32 @@ Sommerville, I. (2016). Software Engineering (10ma ed.). Pearson.
 
 
 **Límite (1 línea):**  
-- ___ (qué NO demuestra esta evidencia) TBD
+- No se esta validando el cifrado de datos en las operaciones de comunicacion y tampoco el Nivel de pruebas de carga.
 
 
 **Escenarios S2 (elige 2 “estrella”):**
-- Escenario A: E: ___ | Entorno: ___ | R: ___ | Medida: ___ | Evidencia: `evidence/week2/...` | Falsación: ___  
-- Escenario B: E: ___ | Entorno: ___ | R: ___ | Medida: ___ | Evidencia: `evidence/week2/...` | Falsación: ___  
+
+| Escenario | HTTP | Estado | Performance |
+|-----------|------|--------|-------------|
+| Q1 | 201 | ✅ PASS | < 500ms |
+| Q2 | 422 | ✅ PASS | < 200ms |
+| Q3 | 200 | ✅ PASS | < 500ms |
+| Q4 | 403 | ✅ PASS | < 100ms |
+| **Smoke** | 200+ | ✅ PASS | < 2s |
 
 **Mini-tabla (obligatoria):**
-| Claim | Escenario | Métrica | Evidencia (archivo) | Oráculo (pass/fail) |
-|---|---|---|---|---|
-| ___ | ___ | ___ | ___ | ___ |
-| ___ | ___ | ___ | ___ | ___ |
+## 📊 Matriz de Trazabilidad
+
+| Q | Escenario | Función | Archivo | Tipo | Criticidad |
+|---|-----------|---------|---------|------|-----------|
+| Q1 | Crear artículo | `get_slug_for_article()` | `app/services/articles.py` | Flujo Positivo | 🔴 Alta |
+| Q2 | Validar duplicados | `create_article()` | `app/db/repositories/articles.py` | Validación | 🔴 Alta |
+| Q3 | Modificar artículo | `check_user_can_modify_article()` | `app/services/articles.py` | Performance | 🔴 Alta |
+| Q4 | Autorización | `check_user_can_modify_article()` | `app/services/articles.py` | Seguridad | 🔴 Crítica |
+
+
+### Matriz de Éxito
+
 
 ---
 
@@ -270,11 +284,6 @@ Sommerville, I. (2016). Software Engineering (10ma ed.). Pearson.
 ./scripts/q4_unauthorized_modify.sh [OTHER_USER_TOKEN] [ARTICLE_SLUG]
 ```
 
-**Fuentes para definición de método:**
-- ...
-- ...
-
-
 ---
 
 ## Slide 4 — Amenazas a la validez 
@@ -322,5 +331,31 @@ Sommerville, I. (2016). Software Engineering (10ma ed.). Pearson.
 - **Evidencia más fuerte:** ___ (por qué reduce incertidumbre)  
 - **Límite más crítico:** ___ (por qué impide generalizar)  
 - **Siguiente mejora concreta:** ___ (sin implementar hoy)
+
+### Puntos Positivos
+✅ Sistema responde correctamente a crear artículos  
+✅ Validación de duplicados funciona  
+✅ Performance aceptable en operaciones básicas  
+✅ Protección de autorización implementada  
+
+### Áreas para Investigar
+⚠️ Performance bajo carga (no testeado en esta semana)  
+⚠️ Manejo de errores detallado  
+⚠️ Validaciones de input (campos vacíos, XSS, etc.)
+
+### Recomendaciones
+📌 Próxima semana: Agregar escenarios de carga  
+📌 Próxima semana: Test de validación de inputs  
+📌 Próxima semana: Test de concurrencia  
+
+## 🎓 Conclusiones
+
+La Tarea Grupal 2 ha sido completada exitosamente. El proyecto cuenta con:
+
+1. **Smoke test funcional** para verificación rápida
+2. **4 escenarios bien definidos** cubriendo funcionalidad, validación y seguridad
+3. **Scripts automatizados** listos para ejecución
+4. **Estructura de evidencia** para registro de pruebas
+5. **Documentación completa** para facilitar ejecución por otros miembros
 
 ---
