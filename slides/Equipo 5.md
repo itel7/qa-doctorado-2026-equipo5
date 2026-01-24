@@ -87,9 +87,6 @@ Sommerville, I. (2016). Software Engineering (10ma ed.). Pearson.
 | Q4 | Autorización | `check_user_can_modify_article()` | `app/services/articles.py` | Seguridad | 🔴 Crítica |
 
 
-### Matriz de Éxito
-
-
 ---
 
 ## Slide 3 — Método formalizado (¿cómo trabajamos para definir escenarios?.)
