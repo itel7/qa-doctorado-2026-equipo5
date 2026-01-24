@@ -288,11 +288,9 @@ Sommerville, I. (2016). Software Engineering (10ma ed.). Pearson.
 
 ## Slide 4 — Amenazas a la validez 
 **Amenazas a la validez (mínimo 3) + mitigación futura:**
-- Interna: ___ → Mitigación: ___  
-- Constructo: ___ → Mitigación: ___  
-- Externa: ___ → Mitigación: ___  
 
-### Riesgo 1: Complejidad de Setup Inicial
+
+### Riesgo 1: Complejidad de Setup Inicial - Interno
 **Descripción**: Requiere múltiples componentes (Python, Poetry, PostgreSQL, Docker)  
 **Impacto**: Potencial barrera de entrada para nuevos team members  
 **Mitigación**: 
@@ -300,7 +298,7 @@ Sommerville, I. (2016). Software Engineering (10ma ed.). Pearson.
 - Documentación paso-a-paso en README.md
 - Docker Compose simplifica orquestación
 
-### Riesgo 2: Dependencia de PostgreSQL
+### Riesgo 2: Dependencia de PostgreSQL - Externa
 **Descripción**: Base de datos requiere estado consistente entre pruebas  
 **Impacto**: Pruebas pueden fallar por estado de BD no limpio  
 **Mitigación**:
@@ -308,7 +306,7 @@ Sommerville, I. (2016). Software Engineering (10ma ed.). Pearson.
 - Fixtures para reset de datos
 - Health check automatizado
 
-### Riesgo 3: Cambios en Dependencias
+### Riesgo 3: Cambios en Dependencias - Externa
 **Descripción**: BCrypt, Passlib, SQLAlchemy son externas y evolucionan  
 **Impacto**: Posibles incompatibilidades con Python 3.11+  
 **Mitigación**:
@@ -316,7 +314,7 @@ Sommerville, I. (2016). Software Engineering (10ma ed.). Pearson.
 - CI/CD pipeline para detectar incompatibilidades
 - Documentación de versiones testeadas
 
-### Riesgo 4: Mantenimiento del Repo Original
+### Riesgo 4: Mantenimiento del Repo Original - Interno
 **Descripción**: Repo original no está activamente mantenido  
 **Impacto**: Posibles vulnerabilidades de seguridad en dependencias  
 **Mitigación**:
@@ -328,9 +326,6 @@ Sommerville, I. (2016). Software Engineering (10ma ed.). Pearson.
 ---
 
 ## Slide 5 — Cierre (2 conclusiones)
-- **Evidencia más fuerte:** ___ (por qué reduce incertidumbre)  
-- **Límite más crítico:** ___ (por qué impide generalizar)  
-- **Siguiente mejora concreta:** ___ (sin implementar hoy)
 
 ### Puntos Positivos
 ✅ Sistema responde correctamente a crear artículos  
