@@ -1,0 +1,7 @@
+id: TC-02
+url: http://host.docker.internal:8000/api/articles?limit=1
+expected_status: 200
+actual_status: 200
+oracles: OR-1,OR-3,OR-4,OR-5
+result: PASS
+reason: 
