@@ -3,7 +3,7 @@
 ---
 
 ## Slide 1 — Semana 3: Top 3 riesgos (priorización)
-**SUT:** ___  
+**SUT:** Swagger Petstore (Petstore v3) 
 **Fuente (repo):** `risk/risk_matrix.csv`
 
 # Estrategia de Pruebas Basada en Riesgo
@@ -19,13 +19,13 @@ Esta estrategia cubre los riesgos de calidad identificados en la matriz, prioriz
 |risk_id|quality_attribute|description|cause|impact_1_5|probability_1_5|score|why_this_score|scenario_ref|evidence_ref|status|
 |---|---|---|---|---|---|---|---|---|---|---|
 |R1|Disponibilidad|API no responde|Crash del servidor|5|3|15|"Impacto alto posible por bugs"|quality/scenarios.md#Q1|evidence/week3/api_down.log|TOP3|
-|R2|Robustez|Error 500 en endpoint crÃ­tico|Inputs inesperados|4|4|16|"Inputs maliciosos son probables"|quality/scenarios.md#Q2|evidence/week3/robustness.log|TOP3|
+|R2|Robustez|Error 500 en endpoint cri­tico|Inputs inesperados|4|4|16|"Inputs maliciosos son probables"|quality/scenarios.md#Q2|evidence/week3/robustness.log|TOP3|
 |R3|Latencia|Respuestas lentas (>1s)|Carga alta|4|3|12|"Puede ocurrir bajo stress"|quality/scenarios.md#Q3|evidence/week3/latency.log|TOP3
 |R4|Consistencia|Datos inconsistentes|Condiciones de carrera|3|2|6|"No muy probable pero grave"|quality/scenarios.md#Q4||
-|R5|Seguridad|Acceso no autorizado|Fallo en auth|5|2|10|"Impacto alto| baja probabilidad"|quality/scenarios.md#Q5||
-|R6|Integridad|Datos corruptos|Fallo en transacciones|4|2|8|"Impacto medio| poco frecuente"|quality/scenarios.md#Q6||
-|R7|Escalabilidad|DegradaciÃ³n bajo carga|Recursos limitados|3|3|9|"Puede ocurrir en picos"|quality/scenarios.md#Q7||
-|R8|Mantenibilidad|Dificultad para actualizar|CÃ³digo acoplado|2|3|6|"Impacto bajo| posible"|quality/scenarios.md#Q8||
+|R5|Seguridad|Acceso no autorizado|Fallo en auth|5|2|10|"Impacto alto baja probabilidad"|quality/scenarios.md#Q5||
+|R6|Integridad|Datos corruptos|Fallo en transacciones|4|2|8|"Impacto medio poco frecuente"|quality/scenarios.md#Q6||
+|R7|Escalabilidad|Degradacion bajo carga|Recursos limitados|3|3|9|"Puede ocurrir en picos"|quality/scenarios.md#Q7||
+|R8|Mantenibilidad|Dificultad para actualizar|Codigo acoplado|2|3|6|"Impacto bajo posible"|quality/scenarios.md#Q8||
 
 
 **Qué decisión de priorización tomamos (1 frase):** ___
@@ -247,8 +247,11 @@ make week4-report
 
 
 **Evidencia clave (2 archivos):**
-- `evidence/week4/...`
-- `evidence/week4/...`
+- `evidence/week4/cases`
+- `evidence/week4/TC-01.json`
+- `evidence/week4/TC-02.json`
+- `evidence/week4/TC-03.json`
+- ...
 
 ---
 
@@ -261,6 +264,6 @@ make week4-report
    - **Conclusión:** Interpretación de success rate 50%
 
 7. **Conclusiones:** 
- - La Semana 4 se logró aplicar rigurosamente técnicas de diseño sistemático (EP+BVA) con oráculos formales, generando **evidencia reproducible** de 12 casos de prueba.
-- A pesar del 50% de success rate, se identificaron **causas raíz reales** (falta de fixtures, comportamiento de framework, codificación URL) que demuestran la efectividad de los oráculos para detectar tanto bugs del SUT como problemas de setup de pruebas.
-- El reporte metodológico de 2 páginas documenta amenazas a la validez, justifica selecciones técnicas, y establece trabajo futuro, cumpliendo con estándares de rigor académico para un doctorado en QA.
+   - La Semana 4 se logró aplicar técnicas de diseño sistemático (EP+BVA) con oráculos formales, generando **evidencia reproducible** de 12 casos de prueba.
+   - A pesar del 50% de success rate, se identificaron **causas raíz reales** (falta de fixtures, comportamiento de framework, codificación URL) que demuestran la efectividad de los oráculos para detectar tanto bugs del SUT como problemas de setup de pruebas.
+   - El reporte metodológico de 2 páginas documenta amenazas a la validez, justifica selecciones técnicas, y establece trabajo futuro, cumpliendo con estándares de rigor académico para un doctorado en QA.
