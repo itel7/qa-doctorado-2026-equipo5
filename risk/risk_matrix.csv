@@ -1,0 +1,9 @@
+risk_id,quality_attribute,description,cause,impact_1_5,probability_1_5,score,why_this_score,scenario_ref,evidence_ref,status
+R1,Disponibilidad,API no responde,Crash del servidor,5,3,15,"Impacto alto, posible por bugs",quality/scenarios.md#Q1,evidence/week3/api_down.log,TOP3
+R2,Robustez,Error 500 en endpoint crítico,Inputs inesperados,4,4,16,"Inputs maliciosos son probables",quality/scenarios.md#Q2,evidence/week3/robustness.log,TOP3
+R3,Latencia,Respuestas lentas (>1s),Carga alta,4,3,12,"Puede ocurrir bajo stress",quality/scenarios.md#Q3,evidence/week3/latency.log,TOP3
+R4,Consistencia,Datos inconsistentes,Condiciones de carrera,3,2,6,"No muy probable pero grave",quality/scenarios.md#Q4,,
+R5,Seguridad,Acceso no autorizado,Fallo en auth,5,2,10,"Impacto alto, baja probabilidad",quality/scenarios.md#Q5,,
+R6,Integridad,Datos corruptos,Fallo en transacciones,4,2,8,"Impacto medio, poco frecuente",quality/scenarios.md#Q6,,
+R7,Escalabilidad,Degradación bajo carga,Recursos limitados,3,3,9,"Puede ocurrir en picos",quality/scenarios.md#Q7,,
+R8,Mantenibilidad,Dificultad para actualizar,Código acoplado,2,3,6,"Impacto bajo, posible",quality/scenarios.md#Q8,,
