@@ -1,0 +1,7 @@
+Systematic Cases Summary (Week 5 Gate)
+======================================
+Date: 2026-02-14 08:14:12
+Total: 3
+PASS:  3
+FAIL:  0
+Evidence: /evidence/week5/systematic_results.csv

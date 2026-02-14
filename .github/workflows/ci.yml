@@ -1,0 +1,27 @@
+name: quality-gate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install docker-compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker-compose
+
+      - name: Run quality gate
+        run: bash ci/run_quality_gate.sh
+
+      - name: Upload week5 evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidence-week5
+          path: evidence/week5/
