@@ -1,28 +1,22 @@
 FROM python:3.9.10-slim
 
-ENV PYTHONUNBUFFERED=1
-WORKDIR /app
+ENV PYTHONUNBUFFERED 1
+
 EXPOSE 8000
+WORKDIR /app
 
-# Dependencias del sistema (CLAVE)
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    gcc \
-    libpq-dev \
-    netcat \
-    && rm -rf /var/lib/apt/lists/*
 
-# Dependencias Python
-COPY pyproject.toml poetry.lock ./
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends netcat && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY poetry.lock pyproject.toml ./
-
 RUN pip install --upgrade pip && \
-    pip install poetry && \
-    poetry config virtualenvs.create false && \
-    poetry install --without dev --no-root
+    pip install poetry>=1.7 && \
+    poetry config virtualenvs.in-project true && \
+    poetry install --with=dev --no-root
 
-# Código
-COPY . .
+COPY . ./
 
-CMD sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000"
+CMD poetry run alembic upgrade head && \
+    poetry run uvicorn --host=0.0.0.0 app.main:app

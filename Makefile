@@ -1,4 +1,4 @@
-.PHONY: help run stop health smoke q1 q2 q3 q4 test-all evidence clean lint format
+.PHONY: help run stop health smoke q1 q2 q3 q4 test-all evidence clean lint format quality-gate
 
 # Variables
 SHELL := /bin/bash
@@ -31,6 +31,16 @@ help:
 	@echo "  make q3               - Q3: Modificar artículo por propietario"
 	@echo "  make q4               - Q4: Rechazar modificación no autorizada"
 	@echo "  make test-all         - Ejecutar smoke + Q1 + Q2 + Q3 + Q4"
+	@echo ""
+	@echo "$(YELLOW)PRUEBAS BASADAS EN RIESGO (Semana 3):$(NC)"
+	@echo "  make risk-tests       - Ejecutar Top 3 de riesgos identificados"
+	@echo ""
+	@echo "$(YELLOW)PRUEBAS SISTEMÁTICAS (Semana 4):$(NC)"
+	@echo "  make systematic-test  - Ejecutar 12 casos EP+BVA con oráculos"
+	@echo "  make week4-report     - Generar reporte metodológico Week 4"
+	@echo ""
+	@echo "$(YELLOW)QUALITY GATE (Semana 5):$(NC)"
+	@echo "  make quality-gate     - Ejecutar gate con evidencia reproducible"
 	@echo ""
 	@echo "$(YELLOW)UTILIDADES:$(NC)"
 	@echo "  make evidence         - Ver evidencia de pruebas"
@@ -121,6 +131,13 @@ evidence:
 		echo "  Carpeta no existe aún"; \
 	fi
 	@echo ""
+	@echo "$(YELLOW)Quality Gate (Semana 5):$(NC)"
+	@if [ -d evidence/week5 ]; then \
+		ls -lh evidence/week5/ 2>/dev/null | tail -n +2 || echo "  No hay evidencia week5"; \
+	else \
+		echo "  Carpeta no existe aún"; \
+	fi
+	@echo ""
 
 # ============================================================================
 # UTILIDADES
@@ -190,8 +207,53 @@ full-test: run
 dev: health smoke
 	@echo "$(GREEN)Dev mode ready$(NC)"
 
+# ============================================================================
+# QUALITY GATE (SEMANA 5)
+# ============================================================================
+
+quality-gate:
+	@echo "$(GREEN)Ejecutando Quality Gate (Semana 5)...$(NC)"
+	@bash ci/run_quality_gate.sh
+
 # Ejecutar antes de hacer commit
 pre-commit: clean test-all
 	@echo "$(GREEN)Pre-commit checks complete$(NC)"
+
+# ============================================================================
+# SEMANA 4 - PRUEBAS SISTEMÁTICAS
+# ============================================================================
+
+systematic-test:
+	@echo "$(BLUE)════════════════════════════════════════$(NC)"
+	@echo "$(BLUE)CASOS SISTEMÁTICOS (Semana 4)$(NC)"
+	@echo "$(BLUE)════════════════════════════════════════$(NC)"
+	@echo ""
+	@echo "$(YELLOW)Endpoint:$(NC) GET /api/articles/{slug}"
+	@echo "$(YELLOW)Técnica:$(NC) Equivalence Partitioning + BVA"
+	@echo "$(YELLOW)Oráculos:$(NC) 7 reglas formales (OR-01 a OR-07)"
+	@echo "$(YELLOW)Casos:$(NC) 12 casos de prueba (TC-01 a TC-12)"
+	@echo ""
+	@./scripts/systematic_cases.sh
+	@echo ""
+	@echo "$(GREEN)Evidencia generada en evidence/week4/$(NC)"
+
+week4-report:
+	@echo "$(BLUE)════════════════════════════════════════$(NC)"
+	@echo "$(BLUE)REPORTE SEMANA 4$(NC)"
+	@echo "$(BLUE)════════════════════════════════════════$(NC)"
+	@echo ""
+	@echo "$(YELLOW)Oráculos:$(NC)           design/oracle_rules.md"
+	@cat design/oracle_rules.md | grep "^##" | head -10
+	@echo ""
+	@echo "$(YELLOW)Casos de Prueba:$(NC)    design/test_cases.md"
+	@cat design/test_cases.md | grep "^##" | head -10
+	@echo ""
+	@echo "$(YELLOW)Evidencia:$(NC)          evidence/week4/"
+	@ls -lh evidence/week4/ | tail -5
+	@echo ""
+	@echo "$(YELLOW)Reporte Completo:$(NC)   reports/week4_report.md"
+	@cat reports/week4_report.md | head -30
+	@echo ""
+	@echo "$(GREEN)Ver reporte completo: cat reports/week4_report.md$(NC)"
 
 .DEFAULT_GOAL := help
