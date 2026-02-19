@@ -35,9 +35,9 @@ run_gate_variant() {
         echo "FAIL" > "$dest_dir/gate_exit.txt"
     fi
 
-    mkdir -p "$dest_dir/evidence_week5"
-    if [ -d "$PROJECT_ROOT/evidence/week5" ]; then
-        cp -R "$PROJECT_ROOT/evidence/week5/." "$dest_dir/evidence_week5/" || true
+    mkdir -p "$dest_dir/evidence_week6"
+    if [ -d "$PROJECT_ROOT/evidence/week6" ]; then
+        cp -R "$PROJECT_ROOT/evidence/week6/." "$dest_dir/evidence_week6/" || true
     fi
 }
 
