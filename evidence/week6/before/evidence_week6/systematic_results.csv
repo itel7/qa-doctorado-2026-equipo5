@@ -1,0 +1,2 @@
+case_id,slug,expected,actual,result
+TC-02,non-existent-20260218_220425,404,404,PASS

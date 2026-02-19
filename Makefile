@@ -1,4 +1,4 @@
-.PHONY: help run stop health smoke q1 q2 q3 q4 test-all evidence clean lint format quality-gate
+.PHONY: help run stop health smoke q1 q2 q3 q4 test-all evidence clean lint format quality-gate gaming-drill
 
 # Variables
 SHELL := /bin/bash
@@ -41,6 +41,9 @@ help:
 	@echo ""
 	@echo "$(YELLOW)QUALITY GATE (Semana 5):$(NC)"
 	@echo "  make quality-gate     - Ejecutar gate con evidencia reproducible"
+	@echo ""
+	@echo "$(YELLOW)GAMING DRILL (Semana 6):$(NC)"
+	@echo "  make gaming-drill     - Ejecutar experimento before/after"
 	@echo ""
 	@echo "$(YELLOW)UTILIDADES:$(NC)"
 	@echo "  make evidence         - Ver evidencia de pruebas"
@@ -214,6 +217,14 @@ dev: health smoke
 quality-gate:
 	@echo "$(GREEN)Ejecutando Quality Gate (Semana 5)...$(NC)"
 	@bash ci/run_quality_gate.sh
+
+# ============================================================================
+# GAMING DRILL (SEMANA 6)
+# ============================================================================
+
+gaming-drill:
+	@echo "$(GREEN)Ejecutando Gaming Drill (Semana 6)...$(NC)"
+	@bash ci/run_gate_gaming_drill.sh
 
 # Ejecutar antes de hacer commit
 pre-commit: clean test-all
