@@ -54,16 +54,29 @@
 > 3-6 debilidades. Marcar severidad: **Crítica / Mayor / Menor**.
 > Cada debilidad debe citar una sección de la propuesta.
 
-- D1 (Severidad: ___): ___  
-  **Texto/Sección relacionada:** Sección ___  
-  **Riesgo/impacto (1 frase):** ___
-- D2 (Severidad: ___): ___  
-  **Texto/Sección relacionada:** Sección ___  
-  **Riesgo/impacto:** ___
-- D3 (Severidad: ___): ___  
-  **Texto/Sección relacionada:** Sección ___  
-  **Riesgo/impacto:** ___
-- (Opcional) D4/D5/D6: ___ (mismo formato)
+- D1 (Severidad: Crítica): Política de reintento que puede enmascarar fallos reales.
+  **Texto/Sección relacionada:** Sección 6 (“considerar el segundo resultado como referencia”).
+  **Riesgo/impacto (1 frase):** Puede inflar artificialmente la tasa de éxito del gate y permitir liberar con defectos no resueltos.
+
+- D2 (Severidad: Mayor): Falta de controles explícitos anti-gaming del gate.
+  **Texto/Sección relacionada:** Sección 5 y Sección 9 (definen checks y aceptación, pero no mínimos obligatorios de casos/anti-manipulación).
+  **Riesgo/impacto:** Se podría “mejorar” el indicador reduciendo cobertura o relajando validaciones sin mejorar calidad real.
+
+- D3 (Severidad: Mayor): Probabilidad de riesgo basada en consenso cuando no hay datos históricos.
+  **Texto/Sección relacionada:** Sección 4, Fase 2.
+  **Riesgo/impacto:** La priorización Top 3 puede quedar sesgada y dirigir esfuerzos a riesgos menos relevantes.
+
+- D4 (Severidad: Mayor): Dependencias operativas fuertes no mitigadas.
+  **Texto/Sección relacionada:** Sección 2 (entorno 24/7, disponibilidad de PO y Tech Lead).
+  **Riesgo/impacto:** Si alguna dependencia falla, se retrasa el cronograma y se degrada la calidad de decisiones/validaciones.
+
+- D5 (Severidad: Mayor): Checks no funcionales quedan informativos sin criterio de salida claramente cuantificado.
+  **Texto/Sección relacionada:** Sección 4, Fase 4 y Sección 5.
+  **Riesgo/impacto:** Puede prolongarse indefinidamente una cobertura no bloqueante en aspectos críticos de confiabilidad operativa.
+
+- D6 (Severidad: Menor): Alcance excluye seguridad avanzada y performance a escala producción.
+  **Texto/Sección relacionada:** Sección 3 (Excluye…).
+  **Riesgo/impacto:** Quedan riesgos técnicos relevantes fuera del programa inicial y deben planificarse en una fase posterior.
 
 ---
 
