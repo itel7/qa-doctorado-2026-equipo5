@@ -8,17 +8,27 @@
 ---
 
 ## Slide 1 — Qué ofrece la propuesta (solo hechos del texto)
-- Objetivo declarado (copiar 1 frase o resumir): ___  
-  **Referencia:** Sección ___
-- Alcance / exclusiones (2+ puntos):
-  - ___ **Ref:** Sección ___  
-  - ___ **Ref:** Sección ___
+- Objetivo declarado:  Implementar en 6 semanas un programa de QA basado en riesgos orientado a reducir riesgo de manera rápida y sostener calidad continua con automatización progresiva. El enfoque combina escenarios, priorización por riesgo, diseño sistemático de pruebas y quality gate en CI con una transición controlada de checks informativos a bloqueantes.  
+  **Referencia:** Sección 1) Resumen Ejecutivo
+- Alcance / exclusiones (2+ puntos)
+  - **Incluye escenarios (≥8)**, Sección 3) Alcance
+  - **oráculos mínimos/estrictos**, Sección 3) Alcance
+  - **casos sistemáticos (≥12)**, Sección 3) Alcance
+- exclusiones
+   - **pruebas avanzadas de seguridad**, Sección 3) Alcance
+   - **performance a escala producción**, Sección 3) Alcance
+     
 - Entregables principales (3+ puntos):  
-  - ___ **Ref:** Sección ___  
-  - ___ **Ref:** Sección ___  
-  - ___ **Ref:** Sección ___
-
----
+  - **Los escenarios (≥8)** → Sección 3 (Alcance) y Sección 4, Fase 1.
+  - **Matriz impacto×probabilidad + Top 3** → Sección 4, Fase 2.
+  - **Estrategia por riesgo + riesgo residual** → Sección 4, Fase 2 y Sección 9.
+  - **Pack sistemático (≥12)** → Sección 3 y Sección 4, Fase 3.
+  - **Oráculos mínimos/estrictos** → Sección 3 y Sección 4, Fase 3.
+  - **Quality gate CI operativo** → Sección 4, Fase 4 y Sección 5.
+  - **Artifacts/evidencia de CI** → Sección 3, Sección 4 (Fases 1, 3, 4) y Sección 9.
+  - **Guía operativa + gobernanza + cambios del gate** → Sección 3, Sección 6 y Sección 7.
+ 
+ ---
 
 ## Slide 2 - Fortalezas (basadas en texto)
 > 3-5 fortalezas. Cada una debe citar una sección.
