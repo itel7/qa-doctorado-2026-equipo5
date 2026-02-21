@@ -8,9 +8,9 @@
 ---
 
 ## Slide 1 — Qué ofrece la propuesta (solo hechos del texto)
-- Objetivo declarado:  Implementar en 6 semanas un programa de QA basado en riesgos orientado a reducir riesgo de manera rápida y sostener calidad continua con automatización progresiva. El enfoque combina escenarios, priorización por riesgo, diseño sistemático de pruebas y quality gate en CI con una transición controlada de checks informativos a bloqueantes.  
+- Objetivo declarado:  Implementar en 6 semanas un programa de QA basado orientado a reducir riesgo de manera rápida y sostener calidad continua con automatización progresiva. El enfoque combina escenarios, priorización por riesgo, diseño sistemático de pruebas y quality gate en CI con una transición controlada de checks informativos a bloqueantes.  
   **Referencia:** Sección 1) Resumen Ejecutivo
-- Alcance / exclusiones (2+ puntos)
+- Alcance (2+ puntos)
   - **Incluye escenarios (≥8)**, Sección 3) Alcance
   - **oráculos mínimos/estrictos**, Sección 3) Alcance
   - **casos sistemáticos (≥12)**, Sección 3) Alcance
@@ -33,20 +33,20 @@
 ## Slide 2 - Fortalezas (basadas en texto)
 > 3-5 fortalezas. Cada una debe citar una sección.
  - F1: Enfoque estructurado y por fases (de definición a operación en CI).
-   **Evidencia en propuesta:** Sección 4 (Fases 1–4).
-   **Por qué es valioso (1 frase):** Reduce ambigüedad y permite implementar calidad de forma incremental y controlada en 6 semanas.
+   - **Evidencia en propuesta:** Sección 4 (Fases 1–4).
+   - **Por qué es valioso (1 frase):** Reduce ambigüedad y permite implementar calidad de forma incremental y controlada en 6 semanas.
 - F2: Priorización explícita por riesgo (impacto × probabilidad) con Top 3 y riesgo residual.
-  **Evidencia en propuesta:** Sección 4, Fase 2 (y coherente con Sección 9).
-  **Por qué es valioso:** Enfoca esfuerzo y presupuesto en los riesgos que más afectan al negocio.
+  - **Evidencia en propuesta:** Sección 4, Fase 2 (y coherente con Sección 9).
+  - **Por qué es valioso:** Enfoca esfuerzo y presupuesto en los riesgos que más afectan al negocio.
 - F3: Diseño técnico sólido de pruebas sistemáticas y oráculos mínimos/estrictos.
-  **Evidencia en propuesta:** Sección 3 y Sección 4, Fase 3.
-  **Por qué es valioso:** Mejora cobertura y consistencia de validación, reduciendo falsos positivos en operación.
+  - **Evidencia en propuesta:** Sección 3 y Sección 4, Fase 3.
+  - **Por qué es valioso:** Mejora cobertura y consistencia de validación, reduciendo falsos positivos en operación.
 - F4: Quality gate en CI con transición progresiva de checks informativos a bloqueantes.
-  **Evidencia en propuesta:** Sección 4, Fase 4 y Sección 5.
-  **Por qué es valioso:** Permite adoptar control de calidad sin frenar abruptamente la entrega continua.
+  - **Evidencia en propuesta:** Sección 4, Fase 4 y Sección 5.
+  - **Por qué es valioso:** Permite adoptar control de calidad sin frenar abruptamente la entrega continua.
 - F5: Define gobernanza y registro de cambios del gate.
-  **Evidencia en propuesta:** Sección 7.
-  **Por qué es valioso:** Aporta trazabilidad y disciplina para evolucionar el gate con menor riesgo operativo.
+  - **Evidencia en propuesta:** Sección 7.
+  - **Por qué es valioso:** Aporta trazabilidad y disciplina para evolucionar el gate con menor riesgo operativo.
 
 ---
 
@@ -55,28 +55,28 @@
 > Cada debilidad debe citar una sección de la propuesta.
 
 - D1 (Severidad: Crítica): Política de reintento que puede enmascarar fallos reales.
-  **Texto/Sección relacionada:** Sección 6 (“considerar el segundo resultado como referencia”).
-  **Riesgo/impacto (1 frase):** Puede inflar artificialmente la tasa de éxito del gate y permitir liberar con defectos no resueltos.
+  - **Texto/Sección relacionada:** Sección 6 (“considerar el segundo resultado como referencia”).
+  - **Riesgo/impacto (1 frase):** Puede inflar artificialmente la tasa de éxito del gate y permitir liberar con defectos no resueltos.
 
 - D2 (Severidad: Mayor): Falta de controles explícitos anti-gaming del gate.
-  **Texto/Sección relacionada:** Sección 5 y Sección 9 (definen checks y aceptación, pero no mínimos obligatorios de casos/anti-manipulación).
-  **Riesgo/impacto:** Se podría “mejorar” el indicador reduciendo cobertura o relajando validaciones sin mejorar calidad real.
+  - **Texto/Sección relacionada:** Sección 5 y Sección 9 (definen checks y aceptación, pero no mínimos obligatorios de casos/anti-manipulación).
+  - **Riesgo/impacto:** Se podría “mejorar” el indicador reduciendo cobertura o relajando validaciones sin mejorar calidad real.
 
 - D3 (Severidad: Mayor): Probabilidad de riesgo basada en consenso cuando no hay datos históricos.
-  **Texto/Sección relacionada:** Sección 4, Fase 2.
-  **Riesgo/impacto:** La priorización Top 3 puede quedar sesgada y dirigir esfuerzos a riesgos menos relevantes.
+  - **Texto/Sección relacionada:** Sección 4, Fase 2.
+  - **Riesgo/impacto:** La priorización Top 3 puede quedar sesgada y dirigir esfuerzos a riesgos menos relevantes.
 
 - D4 (Severidad: Mayor): Dependencias operativas fuertes no mitigadas.
-  **Texto/Sección relacionada:** Sección 2 (entorno 24/7, disponibilidad de PO y Tech Lead).
-  **Riesgo/impacto:** Si alguna dependencia falla, se retrasa el cronograma y se degrada la calidad de decisiones/validaciones.
+  - **Texto/Sección relacionada:** Sección 2 (entorno 24/7, disponibilidad de PO y Tech Lead).
+  - **Riesgo/impacto:** Si alguna dependencia falla, se retrasa el cronograma y se degrada la calidad de decisiones/validaciones.
 
 - D5 (Severidad: Mayor): Checks no funcionales quedan informativos sin criterio de salida claramente cuantificado.
-  **Texto/Sección relacionada:** Sección 4, Fase 4 y Sección 5.
-  **Riesgo/impacto:** Puede prolongarse indefinidamente una cobertura no bloqueante en aspectos críticos de confiabilidad operativa.
+  - **Texto/Sección relacionada:** Sección 4, Fase 4 y Sección 5.
+  - **Riesgo/impacto:** Puede prolongarse indefinidamente una cobertura no bloqueante en aspectos críticos de confiabilidad operativa.
 
 - D6 (Severidad: Menor): Alcance excluye seguridad avanzada y performance a escala producción.
-  **Texto/Sección relacionada:** Sección 3 (Excluye…).
-  **Riesgo/impacto:** Quedan riesgos técnicos relevantes fuera del programa inicial y deben planificarse en una fase posterior.
+  - **Texto/Sección relacionada:** Sección 3 (Excluye…).
+  - **Riesgo/impacto:** Quedan riesgos técnicos relevantes fuera del programa inicial y deben planificarse en una fase posterior.
 
 ---
 
@@ -89,20 +89,20 @@
  - Criterios de aceptación generales del servicio. Ref: Sección 9
 ### B) Vacíos/ambigüedades que impiden evaluar bien (3-5 puntos)
  - Vacío 1: Criterios cuantitativos del gate incompletos.
-   **Qué falta exactamente:** Umbrales numéricos, mínimo de casos ejecutados, reglas de skip/xfail y condición de fallo por evidencia incompleta.
-   **Por qué importa (1 frase):** Sin reglas medibles, el gate puede aprobar con cobertura insuficiente.
+   - **Qué falta exactamente:** Umbrales numéricos, mínimo de casos ejecutados, reglas de skip/xfail y condición de fallo por evidencia incompleta.
+   - **Por qué importa (1 frase):** Sin reglas medibles, el gate puede aprobar con cobertura insuficiente.
 
  - Vacío 2: Política de intermitencia ambigua para aprobar pipelines.
-   **Qué falta exactamente:** Regla formal de rerun (cuándo aplica, cuántas veces, cuál resultado cuenta, cómo se audita).
-   **Por qué importa:** Puede normalizar falsos verdes y ocultar defectos reales.
+   - **Qué falta exactamente:** Regla formal de rerun (cuándo aplica, cuántas veces, cuál resultado cuenta, cómo se audita).
+   - **Por qué importa:** Puede normalizar falsos verdes y ocultar defectos reales.
 
 - Vacío 3: Transición informativo→bloqueante sin criterio de salida definido.
-   **Qué falta exactamente:** Condiciones objetivas de baseline y fecha/umbral para endurecer checks no funcionales.
-   **Por qué importa:** Riesgo de dejar controles importantes en modo informativo indefinidamente.
+   - **Qué falta exactamente:** Condiciones objetivas de baseline y fecha/umbral para endurecer checks no funcionales.
+   - **Por qué importa:** Riesgo de dejar controles importantes en modo informativo indefinidamente.
 
 - Vacío 4: Manejo de dependencias críticas sin plan de contingencia.
-   **Qué falta exactamente:** Plan alterno si no hay PO/Tech Lead o si el entorno 24/7 no está disponible.
-   **Por qué importa:** Afecta cronograma y validez de resultados.
+   - **Qué falta exactamente:** Plan alterno si no hay PO/Tech Lead o si el entorno 24/7 no está disponible.
+   - **Por qué importa:** Afecta cronograma y validez de resultados.
 
 ### C) Preguntas de aclaración al proveedor (2-4 preguntas)
  - P1: ¿Qué umbrales exactos (pass rate, mínimo de casos, política de skips) definen PASS/FAIL de cada check crítico?
