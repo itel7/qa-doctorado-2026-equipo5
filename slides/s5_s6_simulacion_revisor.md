@@ -1,12 +1,12 @@
 # Evaluación de Propuesta - Equipo 5
-**Propuesta evaluada:** B Empresa: AtlasQA Partners  
-**Veredicto:** Aceptar con condiciones
+- **Propuesta evaluada:** B 
+- **Empresa:** AtlasQA Partners  
+- **Veredicto:** Aceptar con condiciones
 
 > Regla: Todo punto debe estar **respaldado por la propuesta**.
 > Si algo no está en la propuesta, debe ir en "Vacíos" o "Preguntas", no como afirmación.
 
 ---
-
 ## Slide 1 — Qué ofrece la propuesta (solo hechos del texto)
 - Objetivo declarado:  Implementar en 6 semanas un programa de QA basado orientado a reducir riesgo de manera rápida y sostener calidad continua con automatización progresiva. El enfoque combina escenarios, priorización por riesgo, diseño sistemático de pruebas y quality gate en CI con una transición controlada de checks informativos a bloqueantes.  
   **Referencia:** Sección 1) Resumen Ejecutivo
