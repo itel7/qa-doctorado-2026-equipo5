@@ -32,17 +32,21 @@
 
 ## Slide 2 - Fortalezas (basadas en texto)
 > 3-5 fortalezas. Cada una debe citar una sección.
-
-- F1: ___  
-  **Evidencia en propuesta:** Sección ___  
-  **Por qué es valioso (1 frase):** ___
-- F2: ___  
-  **Evidencia en propuesta:** Sección ___  
-  **Por qué es valioso:** ___
-- F3: ___  
-  **Evidencia en propuesta:** Sección ___  
-  **Por qué es valioso:** ___
-- (Opcional) F4/F5: ___ (mismo formato)
+ - F1: Enfoque estructurado y por fases (de definición a operación en CI).
+   **Evidencia en propuesta:** Sección 4 (Fases 1–4).
+   **Por qué es valioso (1 frase):** Reduce ambigüedad y permite implementar calidad de forma incremental y controlada en 6 semanas.
+- F2: Priorización explícita por riesgo (impacto × probabilidad) con Top 3 y riesgo residual.
+  **Evidencia en propuesta:** Sección 4, Fase 2 (y coherente con Sección 9).
+  **Por qué es valioso:** Enfoca esfuerzo y presupuesto en los riesgos que más afectan al negocio.
+- F3: Diseño técnico sólido de pruebas sistemáticas y oráculos mínimos/estrictos.
+  **Evidencia en propuesta:** Sección 3 y Sección 4, Fase 3.
+  **Por qué es valioso:** Mejora cobertura y consistencia de validación, reduciendo falsos positivos en operación.
+- F4: Quality gate en CI con transición progresiva de checks informativos a bloqueantes.
+  **Evidencia en propuesta:** Sección 4, Fase 4 y Sección 5.
+  **Por qué es valioso:** Permite adoptar control de calidad sin frenar abruptamente la entrega continua.
+- F5: Define gobernanza y registro de cambios del gate.
+  **Evidencia en propuesta:** Sección 7.
+  **Por qué es valioso:** Aporta trazabilidad y disciplina para evolucionar el gate con menor riesgo operativo.
 
 ---
 
